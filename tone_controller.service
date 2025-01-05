@@ -1,0 +1,14 @@
+[Unit]
+Description=Tone Controller Service
+After=network.target
+
+[Service]
+ExecStart=/opt/yorkshiresvx/venv/bin/python /opt/yorkshiresvx/tone_controller.py
+WorkingDirectory=/opt/yorkshiresvx
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target

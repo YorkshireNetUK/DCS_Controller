@@ -1,0 +1,4 @@
+# Format: tone_frequency,output_gpio,input_gpio,callsign
+74,17,23,G4ABC
+341,17,23,G7XYZ
+500,27,24,M0XYZ

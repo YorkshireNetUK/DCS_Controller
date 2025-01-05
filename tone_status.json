@@ -1,0 +1,10 @@
+{
+    "G4ABC": {
+        "status": "active",
+        "timestamp": "2025-01-03 14:03:00"
+    },
+    "M0XYZ": {
+        "status": "inactive",
+        "timestamp": "2025-01-03 14:10:00"
+    }
+}
