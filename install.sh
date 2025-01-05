@@ -61,6 +61,8 @@ systemctl daemon-reload
 systemctl enable tone_controller.service
 systemctl start tone_controller.service
 
+# Delete index.html
+rm /var/www/html/index.html
 # Restart Apache
 echo "Restarting Apache server..."
 systemctl restart apache2
