@@ -20,7 +20,7 @@ apt update -y && apt upgrade -y
 
 # Install required packages
 echo "Installing required packages..."
-apt install -y python3 python3-pip python3-venv apache2 libapache2-mod-php portaudio19-dev alsa-utils git libblas-dev liblapack-dev
+apt install -y python3 python3-pip python3-venv apache2 libapache2-mod-php portaudio19-dev alsa-utils git libblas-dev liblapack-dev python3-dev gfortran python3-numpy python3-scipy
 
 # Clone the repository
 if [[ ! -d $INSTALL_DIR ]]; then
