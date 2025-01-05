@@ -1,17 +1,20 @@
 <?php
-\$status_file = "tone_status.json";
+$status_file = "tone_status.json";
 
-if (!file_exists(\$status_file)) {
+// Check if the status file exists
+if (!file_exists($status_file)) {
     echo "No data available.";
     exit;
 }
 
-\$data = json_decode(file_get_contents(\$status_file), true);
-if (!\$data) {
+// Read the status file
+$data = json_decode(file_get_contents($status_file), true);
+if (!$data) {
     echo "Unable to parse status data.";
     exit;
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,11 +93,11 @@ if (!\$data) {
                 <th>Status</th>
                 <th>Last Update</th>
             </tr>
-            <?php foreach (\$data as \$callsign => \$info): ?>
+            <?php foreach ($data as $callsign => $info): ?>
                 <tr>
-                    <td><?= htmlspecialchars(\$callsign) ?></td>
-                    <td><?= ucfirst(htmlspecialchars(\$info['status'])) ?></td>
-                    <td><?= htmlspecialchars(\$info['timestamp']) ?></td>
+                    <td><?= htmlspecialchars($callsign) ?></td>
+                    <td><?= ucfirst(htmlspecialchars($info['status'])) ?></td>
+                    <td><?= htmlspecialchars($info['timestamp']) ?></td>
                 </tr>
             <?php endforeach; ?>
         </table>
