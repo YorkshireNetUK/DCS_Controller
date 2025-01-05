@@ -7,7 +7,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # Variables
-REPO_URL="https://github.com/<your-username>/yorkshiresvx.git"
+REPO_URL="https://github.com/YorkshireNetUK/DCS_Controller.git"
 INSTALL_DIR="/opt/yorkshiresvx"
 SCRIPT_DIR="/home/pi"
 HTML_DIR="/var/www/html"
