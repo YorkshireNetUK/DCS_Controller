@@ -59,6 +59,10 @@ echo "Setting up systemd service..."
 cp $INSTALL_DIR/tone_controller.service $SERVICE_FILE
 systemctl daemon-reload
 systemctl enable tone_controller.service
+
+echo "export LD_LIBRARY_PATH=/usr/lib/arm-linux-gnueabihf/openblas-serial:/usr/lib/arm-linux-gnueabihf:\$LD_LIBRARY_PATH" | sudo tee /etc/profile.d/openblas.sh
+sudo chmod +x /etc/profile.d/openblas.sh
+
 systemctl start tone_controller.service
 
 # Delete index.html
